@@ -1,0 +1,34 @@
+GET http://localhost:4000/posts
+
+
+###
+
+POST http://localhost:4000/api/user/login
+Content-Type: application/json
+
+{
+   "email":"demo@email.com",
+   "password" : "123456"
+}
+
+###
+
+POST http://localhost:4000/api/user/register
+Content-Type: application/json
+
+{
+    "email":"demo@email.com",
+    "name":"Demo User",
+    "password":"123456"
+}
+
+###
+
+GET http://localhost:4000/api/user/profile/68d399f36f00c95b68c184ee
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDM5OWYzNmYwMGM5NWI2OGMxODRlZSIsImVtYWlsIjoiZGVtb0BlbWFpbC5jb20iLCJpYXQiOjE3NTg3MjM1NjYsImV4cCI6MTc1ODcyMzU5Nn0.5LSRO8eV0zCjA4OQdpRB4V3se4yOYxYEzSKNHydz2Fc
+
+{
+    "email":"demo@email.com",
+    "password":"123456"
+}
