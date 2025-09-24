@@ -11,8 +11,8 @@ const UserSchema = new Schema<IUser>({
         required:true,
         unique:true
     },
-    mobile:{
-        type:Number,
+    password:{
+        type:String,
         required:true
     },
     isBlocked:{

@@ -3,7 +3,7 @@ import { Document } from "mongoose";
 export interface IUser{
     name : string;
     email : string;
-    mobile : number;
+    password : string;
     isBlocked?: boolean;
     isDeleted?: boolean;
 }
