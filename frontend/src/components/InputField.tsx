@@ -4,14 +4,18 @@ import type { IInputField } from "../interfaces/interfaces";
 const InputField: React.FC<IInputField> = ({
   title,
   type,
+  name,
   placeholder,
   disabled,
   value,
+  onChange,
 }) => {
   return (
     <div className="w-full mt-3">
       <h5 className="mb-1 text-slate-500">{title || "title"}</h5>
       <input
+      onChange={onChange || (()=>{})}
+      name={name || ""}
         value={value || ""}
         type={type || "text"}
         disabled={disabled}

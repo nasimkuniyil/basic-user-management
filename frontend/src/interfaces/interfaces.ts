@@ -6,8 +6,9 @@ export interface IButton {
 export interface IInputField{
     title:string;
     type?:string;
-    onChange?:()=>void | null;
+    name?:string;
+    onChange?:( e: React.ChangeEvent<HTMLInputElement>)=> void | null;
     disabled?:boolean;
     placeholder?:string;
-    value?:string
+    value?:string;
 }

@@ -3,7 +3,7 @@ import Header from "./Header";
 
 const UserLayout = () => {
   return (
-    <div className="min-h-dvh flex flex-col justify-between">
+    <div className="min-h-dvh flex flex-col gap-5">
       <Header />
       <Outlet />
     </div>
