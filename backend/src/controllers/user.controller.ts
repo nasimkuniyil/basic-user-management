@@ -78,6 +78,7 @@ export const doRegister = async (req: Request, res: Response) => {
     const userData = {
       name,
       email,
+      role:"user",
       password: await bcrypt.hash(password, 10)
     }
 
