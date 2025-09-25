@@ -11,8 +11,8 @@ const EditProfile:React.FC = () => {
   }
 
   return (
-    <div className="flex items-center justify-center h-dvh">
-      <div className=" bg-white rounded-lg shadow w-1/3 h-1/2 flex flex-col gap-5 items-center justify-center">
+    <div className="flex items-center justify-center">
+      <div className=" bg-white rounded-lg shadow p-5 w-1/3 h-1/2 flex flex-col gap-5 items-center justify-center">
         <div className="mx-auto h-25 w-25 rounded-full bg-blue-50">
           <img className="h-full w-full" src="/user_profile_icon.png" alt="" />
         </div>

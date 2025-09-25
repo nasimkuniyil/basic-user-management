@@ -4,10 +4,10 @@ import Footer from "./Footer";
 
 const AdminLayout = () => {
   return (
-    <div className="min-h-lvh flex flex-col justify-between">
+    <div className="min-h-dvh flex flex-col gap-5">
       <Header />
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

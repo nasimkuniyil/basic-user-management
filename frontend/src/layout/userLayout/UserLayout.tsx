@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const UserLayout = () => {
   return (
-    <div className="min-h-lvh flex flex-col justify-between">
+    <div className="min-h-dvh flex flex-col justify-between">
       <Header />
       <Outlet />
       <Footer />

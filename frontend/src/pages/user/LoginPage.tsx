@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const LoginPage = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen p-4">
+    <div className="flex items-center justify-center p-4">
       <div className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md border border-gray-200">
         <div id="loginForm" className="space-y-6">
           <h1 className="text-3xl font-extrabold text-center text-gray-900">Welcome Back</h1>
