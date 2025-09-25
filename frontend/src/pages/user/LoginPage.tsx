@@ -1,5 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import InputField from '../../components/InputField'
+import Button from '../../components/Button'
 
 const LoginPage = () => {
   return (
@@ -10,27 +12,21 @@ const LoginPage = () => {
           <p className="text-center text-text-light">Log in to your account to continue.</p>
           <form action="#" method="POST" className="space-y-4">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email address</label>
-              <input id="email" name="email" type="email" autoComplete="email" required
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary transition duration-300" />
+              <InputField title="email" type="email" placeholder="Email address"/>
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
-              <input id="password" name="password" type="password" autoComplete="current-password" required
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary transition duration-300" />
+              <InputField title="password" type="password" placeholder="Password"/>
             </div>
 
             <div className="flex items-center justify-between">
-              <div className="text-sm">
+              <div className="text-xs">
                 <NavLink to="/signup" className="font-medium text-primary hover:text-primary-dark transition duration-300 underline hover:no-underline">Create an account?</NavLink>
               </div>
             </div>
 
-            <div>
-              <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-lg font-semibold text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300">
-                Sign in
-              </button>
+            <div className='text-center'>
+              <Button onClick={() => {}}>Sign in</Button>
             </div>
           </form>
         </div>
