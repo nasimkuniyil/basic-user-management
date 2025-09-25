@@ -15,8 +15,8 @@ export const authenticateToken = async (req: CustomRequest, res: Response, next:
         const decoded = await jwt.verify(token, process.env.JWT_ACCESS_TOKEN_SECRET as string);
         req.user = decoded;
         next();
-        // next();
     } catch (err) {
+        return next(err);
         console.log("auth middleware error.", err);
         res.status(401).json({ success: false, message: "authontication invalid" })
     }

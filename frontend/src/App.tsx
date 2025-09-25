@@ -1,22 +1,27 @@
 import { Route, Routes } from "react-router-dom";
-import Layout from "./layout/Layout";
-import Home from "./pages/Home";
+import Home from "./pages/user/Home";
+import LoginPage from "./pages/user/LoginPage";
+import SignupPage from "./pages/user/SignupPage";
+import Profile from "./pages/user/Profile";
+import EditProfile from "./pages/user/EditProfile";
 import ErrorPage from "./pages/ErrorPage";
-import Profile from "./pages/Profile";
-import EditProfile from "./pages/EditProfile";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
+import AdminLayout from "./layout/adminLayout/AdminLayout";
+import UserLayout from "./layout/userLayout/UserLayout";
+import Dashboard from "./pages/admin/Dashboard";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<UserLayout />}>
         <Route index element={<Home />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/profile/:id" element={<Profile />} />
+        <Route path="/profile/:id/edit" element={<EditProfile />} />
       </Route>
-      <Route path="/login" element={<LoginPage/>} />
-      <Route path="/signup" element={<SignupPage/>} />
-      <Route path="/profile/:id" element={<Profile />} />
-      <Route path="/profile/:id/edit" element={<EditProfile />} />
+      <Route path="/admin" element={<AdminLayout />}>
+      <Route index element={<Dashboard/>}/>
+      </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );

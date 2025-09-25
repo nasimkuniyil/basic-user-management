@@ -1,7 +1,6 @@
 import React from "react";
-import InputField from "../components/InputField";
-import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
+import Button from "../../components/Button";
 
 const Profile:React.FC = () => {
     const navigate = useNavigate();
