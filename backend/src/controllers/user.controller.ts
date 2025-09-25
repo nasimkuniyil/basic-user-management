@@ -1,9 +1,10 @@
-import { Request, Response } from "express";
+ import { Request, Response } from "express";
 import User from "../models/user.model";
 import { IUser } from "../interfaces/user.interface";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import { GenerateAccessToken } from "../utils/authTokens";
+import { createUser } from "../service/signup";
 
 export const doLogin = async (req: Request, res: Response) => {
   try {
@@ -75,15 +76,7 @@ export const doRegister = async (req: Request, res: Response) => {
         .json({ error: "User already exists with this email" });
     }
 
-    const userData = {
-      name,
-      email,
-      role:"user",
-      password: await bcrypt.hash(password, 10)
-    }
-
-    const newUser = new User<IUser>(userData);
-    await newUser.save();
+    const newUser = await createUser({name, email, password, role:"user"});
 
     const payload = { id: newUser._id, email: newUser.email };
 
