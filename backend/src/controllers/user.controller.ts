@@ -4,7 +4,7 @@ import { IUser } from "../interfaces/user.interface";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import { GenerateAccessToken } from "../utils/authTokens";
-import { createUser } from "../service/signup";
+import { createUser } from "../service/signup.service";
 
 export const doLogin = async (req: Request, res: Response) => {
   try {
