@@ -24,7 +24,7 @@ export const doLogin = async (req: Request, res: Response) => {
       return res.status(401).json({ error: "Wrong password" });
     }
 
-    const payload = { id: user._id, email: user.email };
+    const payload = { id: user._id, email: user.email, role:user.role };
 
     const accessToken = GenerateAccessToken(payload); 
 
